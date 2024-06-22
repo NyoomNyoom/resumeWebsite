@@ -1,50 +1,15 @@
 import './App.css';
 
-function App() {
-  let bodyContent = <HomeBody />;
+import {Route, Switch} from 'react-router-dom';
 
-  function Navbar() {
-    function OnHomeClicked() {
-      bodyContent = <HomeBody />;
-    }
+import About from './pages/About';
+import HomePage from './pages/HomePage';
 
-    function OnPortfolioClicked() {
-      bodyContent = <PortfolioBody />
-    }
-  
-    return (
-      <nav>
-        <button onClick={OnHomeClicked}>HOME</button>
-        <button onClick={OnPortfolioClicked}>PORTFOLIO</button>
-      </nav>
-    )
-  }
-  
-  function HomeBody() {
-    return (
-      <h1>Welcome to my portfolio</h1>
-    )
-  }
-
-  function PortfolioBody() {
-    return (
-      <h1>This is my portfolio</h1>
-    )
-  }
-
+export default function App() {
   return (
-    <div className="App">
-      <header>
-        <Navbar />
-      </header>
-      <body>
-        {bodyContent}
-      </body>
-      <footer>
-        <p>Thank you for reading :)</p>
-      </footer>
-    </div>
-  );
+    <Switch>
+      <Route exact path="/" component={HomePage} />
+      <Route path="/:id" component ={About} />
+    </Switch>
+  )
 }
-
-export default App;
