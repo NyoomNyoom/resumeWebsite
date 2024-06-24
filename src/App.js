@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom'
 
 import About from './pages/About';
 import HomePage from './pages/HomePage';
+import Footer from './pages/Footer'
 
 export default function App() {
   return (
@@ -18,8 +19,9 @@ export default function App() {
           <Route path="/about" element={<About />} />
         </Routes>
       </Router>
+      <Footer />
     </div>
-      )
+  )
 }
 
 // Use the parameters for App() to pass through what page I want rendered when it is
