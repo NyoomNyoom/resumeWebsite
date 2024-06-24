@@ -7,17 +7,19 @@ import HomePage from './pages/HomePage';
 
 export default function App() {
   return (
-    <Router>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-      </nav>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </Router>
-  )
+    <div className="mainContent">
+      <Router>
+        <nav className="navbar">
+          <Link className="links" to="/">Home</Link>
+          <Link to="/about">About</Link>
+        </nav>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
+    </div>
+      )
 }
 
 // Use the parameters for App() to pass through what page I want rendered when it is

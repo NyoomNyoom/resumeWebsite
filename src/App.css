@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+  background-color: pink;
+}
+
+.links {
+  padding: 5px;
+}
+
+.mainContent {
+  text-align: center;
+}
