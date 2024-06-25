@@ -1,9 +1,9 @@
 import React from 'react'
-import { BrowserRouter as Router, Link, Route, Routes, Outlet} from 'react-router-dom'
+import { BrowserRouter as Link, Outlet} from 'react-router-dom'
 
 export default function Portfolio() {
     return(
-        <div className='Portfolio'>
+        <div className='Portfolio container'>
                 <nav className='portfolioNav'>
                     <Link to="/portfolio/">About</Link>
                     <Link to="/portfolio/shellApp">Shell App</Link>
