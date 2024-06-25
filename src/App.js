@@ -6,6 +6,8 @@ import About from './pages/About';
 import HomePage from './pages/HomePage';
 import Footer from './pages/Footer'
 import Portfolio from './pages/Portfolio';
+import PortAbout from './pages/PortAbout'
+import ShellApp from './pages/ShellApp'
 
 export default function App() {
   return (
@@ -19,7 +21,10 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
-          <Route path='/portfolio' element={<Portfolio />} />
+          <Route path='/portfolio' element={<Portfolio />}>
+            <Route path='/portfolio/' element={<PortAbout />} />
+            <Route path='/portfolio/shellApp' element={<ShellApp />} />
+          </Route>
         </Routes>
       </Router>
       <Footer />
